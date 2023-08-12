@@ -18,7 +18,7 @@ export default function AuthGuard({ children }: Props) {
     } else {
       setAuthenticated(true);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps 
   }, [isAuthenticated]);
 
   return <>{children}</>;

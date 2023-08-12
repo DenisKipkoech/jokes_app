@@ -3,6 +3,7 @@ import { useRoutes } from "react-router-dom";
 import Login from "./pages/Login";
 import AuthGuard from "./guards/AuthGuard";
 import JokesPage from "./pages/JokesPage";
+import JokeCreateUpdate from "./pages/JokeCreateUpdate";
 
 export default function Router() {
   const routes = useRoutes([
@@ -17,6 +18,22 @@ export default function Router() {
           <JokesPage />
         </AuthGuard>
       ),
+    },
+    {
+      path:'joke/new',
+      element:(
+        <AuthGuard>
+          <JokeCreateUpdate />
+        </AuthGuard>
+      )
+    },
+    {
+      path:'joke/:id/edit',
+      element:(
+        <AuthGuard>
+          <JokeCreateUpdate />
+        </AuthGuard>
+      )
     },
   ]);
   

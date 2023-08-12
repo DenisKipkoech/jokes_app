@@ -27,9 +27,10 @@ export default function JokesPage() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
-  useQuery("all_jokes", () => baseGet("?_page=2&_limit=10"), {
+  useQuery("all_jokes", () => baseGet("/?_page=2&_limit=10"), {
     refetchOnWindowFocus: false,
     onSuccess: (data) => setJokes(data.data),
+    onError: () => alert("Failed to get jokes!"),
   });
 
   const handleChangePage = (event: unknown, newPage: number) => {
