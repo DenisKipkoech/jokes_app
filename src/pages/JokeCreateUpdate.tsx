@@ -4,6 +4,7 @@ import { useLocation, useParams } from 'react-router-dom'
 import { baseGet } from '../services/api';
 import { Container, Typography } from '@mui/material';
 import JokesForm from '../sections/JokesForm';
+import Header from '../components/Header';
 
 type Joke = {
     id?: number;
@@ -62,6 +63,9 @@ export default function JokeCreateUpdate() {
   return (
     <Container maxWidth="lg">
         <br />
+        <Header />
+        <br />
+
         <Typography variant='h4' paragraph>{isEdit ? `Edit ${joke?.title}` : 'Add New Joke'}</Typography>
 
         <JokesForm isEdit={isEdit} joke={joke} loading={fetchJoke.isLoading}/>

@@ -12,6 +12,7 @@ import {
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { baseGet } from "../services/api";
+import Header from "../components/Header";
 
 type Joke = {
   id?: number;
@@ -27,7 +28,7 @@ export default function JokesPage() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
-  useQuery("all_jokes", () => baseGet("/?_page=2&_limit=10"), {
+  useQuery("all_jokes", () => baseGet(""), {
     refetchOnWindowFocus: false,
     onSuccess: (data) => setJokes(data.data),
     onError: () => alert("Failed to get jokes!"),
@@ -48,7 +49,10 @@ export default function JokesPage() {
     <>
       <Container maxWidth="xl">
         <br />
-        <Typography variant="h4" fontWeight={700}>
+        <Header />
+        <br />
+        
+        <Typography variant="h4" fontWeight={700} paragraph>
           Home
         </Typography>
 
