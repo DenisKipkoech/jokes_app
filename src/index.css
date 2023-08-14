@@ -11,3 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.css-1ex1afd-MuiTableCell-root, .css-1ygcj2i-MuiTableCell-root{
+  border-right: 1px solid;
+}
