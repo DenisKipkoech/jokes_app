@@ -1,77 +1,46 @@
-# jokes_app
-## API
+# Getting Started with Create React App
 
-Endpoint URL: https://retoolapi.dev/zu9TVE/jokes
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Joke structure
+## Available Scripts
 
-```JSON
-  {
-    "id": 19,
-    "Title": "Mountaineering",
-    "Body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Author": "crubery6s@simplemachines.org",
-    "Views": 98,
-    "CreatedAt": 1670164409747
-  }
-```
+In the project directory, you can run:
 
-### HTTP method endpoints
+### `yarn start`
 
-| Method Type  | Endpoint                          |
-| ------------ | --------------------------------- |
-| GET          | zu9TVE/jokes                      |
-| GET filter   | zu9TVE/jokes?Views=84             |
-| GET by id    | zu9TVE/jokes/1                    |
-| GET paginate | zu9TVE/jokes/?\_page=2&\_limit=10 |
-| POST         | zu9TVE/jokes                      |
-| PUT          | zu9TVE/jokes/1                    |
-| PATCH        | zu9TVE/jokes/1                    |
-| DELETE       | zu9TVE/jokes/1                    |
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You can see more routes [here](https://www.npmjs.com/package/json-server#routes)
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-## Specification
+### `yarn test`
 
-In the main page a table should list all the jokes paginated with options for 5 and 10 items per page selected by the user in the very bottom of the table with two buttons for next (>) and previous (<) page and one dropdown to select the 5 or 10 item limit.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-The user should also be able to filter and sort the results by the number of views or by created date.
+### `yarn build`
 
-The information shown in the table should have the following columns:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-| Title     | Author               | Created Date | Views |
-| --------- | -------------------- | ------------ | ----- |
-| JokeTitle | crubery6s@\*\*\*.org | 23 Feb 2022  | 65    |
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Author's and Date format should be exactly as in the example above
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Style
+### `yarn eject`
 
-Columns has gaps and a vertical line between them like in the image bellow
-![styling](https://i.imgur.com/j4d9fNG.png)
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-In the views column every number has to be one of the following colors following the rules:
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- if the number of views is between 0 and 25,inclusive the number must be <span style="color:tomato">tomato</span>
-- if the number of views is between 26 and 50,inclusive the number must be <span style="color:orange">orange</span>
-- if the number of views is between 51 and 75,inclusive the number must be <span style="color:yellow">yellow</span>
-- if the number of views is between 76 and 100,inclusive the number must be <span style="color:green">green</span>
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-### Functionality
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-1. Title should be a link leading to another page where the user should have a prefilled form with all the fields and a button to submit any changes for the specific item. There should be also a close button to go back if the user does not want to make any changes as well as a delete button to delete the item.
-2. In the home page it should be also a add new joke button that leads to the same form as above but with all the form fields empty.
-3. A dark mode toggle should switch background and text color.
-4. In order for the user to have access to the application, a "token" should exist in cookies or local storage. If there is no "token" a login screen prompts the user to click a button that stores a "token". Also a logout button should displayed in the home page.
+## Learn More
 
-# Git
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To start developing, create a git repository and add this file as Readme.md in the main branch. Then start developing the application in another branch.
-
-# Tech Stack
-
-The above app needs to be implemented using ReactJS and Typescript. The choices of frameworks, starters and libraries are up to the developer.
-
-# Scope
-
-This assignment is designed to gauge your skills as a Frontend Developer. Such skills would be good choices in library selection, code structuring, quality of code, proper abstractions and component composability to name a few.
+To learn React, check out the [React documentation](https://reactjs.org/).
